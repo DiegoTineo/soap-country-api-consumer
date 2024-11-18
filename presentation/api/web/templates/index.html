@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{.Title}}</title>
+        <link rel="stylesheet" href="/public/globals.css" />
+    </head>
+    <body class="layout">
+        <div class="header">{{.Header}}</div>
+        <div class="main">
+            <section class="cards">
+                {{range .Countries}}
+                <div class="card">
+                  <img src={{.Flag}} alt="Flag" class="flag">
+                  <div class="container">
+                    <h4><b>{{.Name}}</b></h4>
+                    <p>Architect & Engineer</p>
+                  </div>
+                </div>
+                {{end}}
+            </section>
+        </div>
+        <div class="footer">{{.Footer}}</div>
+    </body>
+</html>
